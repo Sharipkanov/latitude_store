@@ -148,8 +148,8 @@ gulp.task('build',["clean"], function(){
 gulp.task('watch', function () {
     // gulp.watch('bower.json', ["bower"]);
     gulp.watch(sources.sass.watch, ['compass']);
-    // gulp.watch(sources.pug.watch, ["pug"]);
-    gulp.watch(sources.twig.watch, ["twig"]);
+    gulp.watch(sources.pug.watch, ["pug"]);
+    // gulp.watch(sources.twig.watch, ["twig"]);
 });
 
-gulp.task('default', ['connect', 'twig', 'compass', 'watch']);
+gulp.task('default', ['connect', 'pug', 'compass', 'watch']);

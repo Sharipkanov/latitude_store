@@ -1,4 +1,134 @@
 extends layouts/app.pug
 
 block content
-    h1 Hello World!
+    a.open-cart-fixed.btn(href="#") Open
+    .container
+        //.cart-page
+        //    h2.cart-page-title  Ваша Корзина
+        //    .cart-page-content
+        //        .cart-page-content__item
+        //            .cart-page-content__item_thumb
+        //                img(src="images/item-img.png" alt="")
+        //            .cart-page-content__item_content
+        //                div: .cart-page-content__item_title Latitude saga grafit
+        //                div: .cart-page-content__item_articul Арт.: LSG001
+        //                .cart-page-content__item_footer
+        //                    p 1 × 9 900 р
+        //                    p 9 900 р
+        //            a.cart-page-content__item_remove(href="#")
+        //
+        //    .cart-page-footer
+        //        .cart-page-footer__checkout_wrap
+        //            div
+        //                form.cart-page-footer__checkout_form
+        //                    input(type="text" name="promocode" placeholder="Введите промо-код")
+        //                    input(type="submit" value="ОК")
+        //            div
+        //                .cart-page-footer__checkout_total
+        //                    p Общая сумма:
+        //                    p 19 900 р
+        //        .cart-page-footer__btns_wrap
+        //            a.cart-page-footer__btns_item(href="#") оформить заказ
+
+
+        .cart-delivery
+            div
+                .cart-delivery-userInfo
+                    form.cart-delivery-userInfo__form
+                        h3.cart-delivery-userInfo__form_title Личная информация
+                        .cart-delivery-userInfo__form_block: div: input(type="email" name="email" placeholder="Email" required)
+                        .cart-delivery-userInfo__form_inlineBlock
+                            div: input(type="text" name="name" placeholder="Имя" required)
+                            div: input(type="text" name="surname" placeholder="Фамилия" required)
+                        h3.cart-delivery-userInfo__form_title Адрес доставки
+                        .cart-delivery-userInfo__form_block: div: input(type="text" name="address" placeholder="Адрес" required)
+                        .cart-delivery-userInfo__form_block: div: input(type="text" name="city" placeholder="Город" required)
+                        .cart-delivery-userInfo__form_inlineBlock
+                            div
+                                select(name="country" required)
+                                    option(value="") Страна
+                            div: input(type="text" name="post-index" placeholder="Индекс" required)
+                        .cart-delivery-userInfo__form_block: div: input(type="text" name="phone" placeholder="Телефон" required)
+                        .cart-delivery-userInfo__form_inlineBlock
+                            div: a(href="#") Вернуться к корзине
+                            div: input.btn(type="submit" value="продолжить")
+            div
+                .cart-page
+                    .cart-page-content
+                        .cart-page-content__item
+                            .cart-page-content__item_thumb
+                                img(src="images/item-img.png" alt="")
+                            .cart-page-content__item_content
+                                div: .cart-page-content__item_title Latitude saga grafit
+                                div: .cart-page-content__item_articul Арт.: LSG001
+                                .cart-page-content__item_footer
+                                    p 1 × 9 900 р
+                                    p 9 900 р
+                            a.cart-page-content__item_remove(href="#")
+                        .cart-page-content__item
+                            .cart-page-content__item_thumb
+                                img(src="images/item-img.png" alt="")
+                            .cart-page-content__item_content
+                                div: .cart-page-content__item_title Latitude saga grafit
+                                div: .cart-page-content__item_articul Арт.: LSG001
+                                .cart-page-content__item_footer
+                                    p 1 × 9 900 р
+                                    p 9 900 р
+                            a.cart-page-content__item_remove(href="#")
+                        .cart-page-content__item
+                            .cart-page-content__item_thumb
+                                img(src="images/item-img.png" alt="")
+                            .cart-page-content__item_content
+                                div: .cart-page-content__item_title Latitude saga grafit
+                                div: .cart-page-content__item_articul Арт.: LSG001
+                                .cart-page-content__item_footer
+                                    p 1 × 9 900 р
+                                    p 9 900 р
+                            a.cart-page-content__item_remove(href="#")
+
+                    .cart-page-footer
+                        .cart-page-footer__checkout_wrap
+                            div
+                                form.cart-page-footer__checkout_form
+                                    input(type="text" name="promocode" placeholder="Введите промо-код")
+                                    input(type="submit" value="ОК")
+                            div
+                                .cart-page-footer__checkout_total
+                                    p Общая сумма:
+                                    p 19 900 р
+                        .cart-page-footer__btns_wrap
+                            a.cart-page-footer__btns_item(href="#") оформить заказ
+
+    .cart-fixed-cover
+        .cart-fixed
+            // Cart header
+            .cart-fixed-header
+                .cart-fixed-header__item: p корзина (3)
+                .cart-fixed-header__item: a.close-cart-fixed(href="#") закрыть
+
+            // Cart content
+            .cart-fixed-content
+                // Cart item
+                .cart-fixed-content__item
+                    .cart-fixed-content__item_thumb
+                        img(src="images/item-img.png" alt="")
+                    .cart-fixed-content__item_content
+                        div: .cart-fixed-content__item_title Latitude saga grafit
+                        div: .cart-fixed-content__item_articul Арт.: LSG001
+                        .cart-fixed-content__item_footer
+                            p 1 × 9 900 р
+                            p 9 900 р
+                    a.cart-fixed-content__item_remove(href="#")
+
+            // Cart footer
+            .cart-fixed-footer
+                .cart-fixed-footer__checkout_wrap
+                    form.cart-fixed-footer__checkout_form
+                        input(type="text" name="promocode" placeholder="Введите промо-код")
+                        input(type="submit" value="ОК")
+                    .cart-fixed-footer__checkout_total
+                        p Общая сумма:
+                        p 19 900 р
+                .cart-fixed-footer__btns_wrap
+                    a.cart-fixed-footer__btns_item--transparent.hide-on-mobile(href="#") просмотр корзины
+                    a.cart-fixed-footer__btns_item(href="#") оформить заказ
