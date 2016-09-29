@@ -10,12 +10,16 @@ $(function() {
         e.preventDefault();
         openCart();
 
+        $('body').css('overflow', 'hidden');
+
         return false;
     });
 
     $(doc).on('click', '.close-cart-fixed', function (e) {
         e.preventDefault();
         closeCart();
+
+        $('body').css('overflow', 'auto');
 
         return false;
     });
