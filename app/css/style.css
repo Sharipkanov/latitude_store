@@ -262,11 +262,12 @@ a:hover {
   }
 }
 .cart-delivery-userInfo__form input,
+.cart-delivery-userInfo__form button,
 .cart-delivery-userInfo__form select,
 .cart-delivery-userInfo__form option {
   width: 100%;
   height: 50px;
-  border: 1px solid #d9d9d9;
+  line-height: 48px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -274,6 +275,10 @@ a:hover {
   padding: 0 10px;
   outline: none;
   font-size: 14px;
+}
+.cart-delivery-userInfo__form input,
+.cart-delivery-userInfo__form select {
+  border: 1px solid #d9d9d9;
 }
 .cart-delivery-userInfo__form_inlineBlock {
   font-size: 0;
